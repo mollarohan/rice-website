@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohan Institute of Computer Education (RICE)</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    /* ===========================
+   RICE Website CSS - Part 1
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Container */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Header */
+
+.header{
+    background:#0a1f44;
+    color:#fff;
+    padding:15px 0;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:60px;
+    margin-right:10px;
+}
+
+.logo h2{
+    color:#ffd700;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ffd700;
+}
+
+/* Buttons */
+
+.call-btn,
+.btn,
+.btn2{
+    padding:12px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.call-btn{
+    background:#ffd700;
+    color:#000;
+}
+
+.call-btn:hover{
+    background:#fff;
+}
+
+.btn{
+    background:#0a1f44;
+    color:white;
+    margin-right:15px;
+}
+
+.btn:hover{
+    background:#ffd700;
+    color:#000;
+}
+
+.btn2{
+    background:#25D366;
+    color:white;
+}
+
+.btn2:hover{
+    background:#128C7E;
+}
+
+/* Hero */
+
+.hero{
+    padding:80px 0;
+    background:linear-gradient(135deg,#0a1f44,#154c9e);
+    color:white;
+}
+
+.hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    width:50%;
+}
+
+.hero-text h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero-text h3{
+    color:#ffd700;
+    margin-bottom:15px;
+}
+
+.hero-text p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.hero-image{
+    width:45%;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:450px;
+    animation:float 3s ease-in-out infinite;
+}
+
+/* About */
+
+#about{
+    padding:80px 0;
+    text-align:center;
+    background:white;
+}
+
+#about h2{
+    font-size:40px;
+    color:#0a1f44;
+    margin-bottom:20px;
+}
+
+#about p{
+    font-size:18px;
+    max-width:900px;
+    margin:auto;
+}
+
+/* Animation */
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero-content{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text,
+.hero-image{
+width:100%;
+}
+
+.hero-text h1{
+font-size:32px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+/* ==========================================
+   RICE WEBSITE CSS - PART 2
+   Courses | Gallery | Contact | Footer
+========================================== */
+
+/* COURSES */
+
+#courses{
+    padding:80px 0;
+    background:#eef3ff;
+}
+
+#courses h2{
+    text-align:center;
+    font-size:40px;
+    color:#0a1f44;
+    margin-bottom:50px;
+}
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.course-box{
+    background:#fff;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.4s;
+}
+
+.course-box:hover{
+    transform:translateY(-10px);
+}
+
+.course-box h3{
+    color:#0a1f44;
+    margin-bottom:15px;
+}
+
+.course-box p{
+    color:#666;
+    margin-bottom:15px;
+}
+
+.course-box ul{
+    padding-left:20px;
+}
+
+.course-box li{
+    margin:8px 0;
+}
+
+/* GALLERY */
+
+#gallery{
+    padding:80px 0;
+    background:#fff;
+}
+
+#gallery h2{
+    text-align:center;
+    color:#0a1f44;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:12px;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* CONTACT */
+
+#contact{
+    padding:80px 0;
+    background:#0a1f44;
+    color:#fff;
+}
+
+#contact h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact-box p{
+    font-size:18px;
+    margin:12px 0;
+}
+
+.contact-box a{
+    color:#ffd700;
+    text-decoration:none;
+}
+
+/* SOCIAL BUTTONS */
+
+.social{
+    margin-top:25px;
+}
+
+.social a{
+    display:inline-block;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    border-radius:50%;
+    background:#fff;
+    color:#0a1f44;
+    margin:8px;
+    text-align:center;
+    font-size:22px;
+    transition:.3s;
+}
+
+.social a:hover{
+    background:#ffd700;
+}
+
+/* FOOTER */
+
+footer{
+    background:#06142d;
+    color:#ccc;
+    text-align:center;
+    padding:20px;
+    font-size:15px;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    text-align:center;
+    line-height:60px;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    z-index:999;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#0a1f44;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ddd;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+#courses h2,
+#gallery h2,
+#contact h2{
+    font-size:30px;
+}
+
+.course-box{
+    padding:20px;
+}
+
+.contact-box p{
+    font-size:16px;
+}
+
+}
+
+/* ==========================================
+   RICE WEBSITE CSS - PART 3
+   Premium Animation & Effects
+========================================== */
+
+/* Smooth Scroll */
+html{
+    scroll-behavior:smooth;
+}
+
+/* Glass Cards */
+.glass{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+/* Fade Up Animation */
+.fade-up{
+    opacity:0;
+    transform:translateY(60px);
+    animation:fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Zoom Animation */
+
+.zoom{
+    animation:zoomIn 1s ease;
+}
+
+@keyframes zoomIn{
+
+0%{
+transform:scale(.7);
+opacity:0;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+/* Hero Title */
+
+.hero h1{
+
+animation:leftSlide 1.2s ease;
+
+}
+
+@keyframes leftSlide{
+
+from{
+
+opacity:0;
+
+transform:translateX(-80px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+/* Hero Image */
+
+.hero-image img{
+
+animation:rightSlide 1.5s ease;
+
+}
+
+@keyframes rightSlide{
+
+from{
+
+opacity:0;
+
+transform:translateX(80px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+/* Floating Effect */
+
+.float{
+
+animation:floating 3s infinite ease-in-out;
+
+}
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Shine Button */
+
+.btn,
+.btn2,
+.call-btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.btn::before,
+.btn2::before,
+.call-btn::before{
+
+content:"";
+
+position:absolute;
+
+left:-100%;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(255,255,255,.4);
+
+transform:skewX(-30deg);
+
+transition:.7s;
+
+}
+
+.btn:hover::before,
+.btn2:hover::before,
+.call-btn:hover::before{
+
+left:120%;
+
+}
+
+/* Course Hover */
+
+.course-box{
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.course-box::after{
+
+content:"";
+
+position:absolute;
+
+left:-100%;
+
+top:0;
+
+width:100%;
+
+height:5px;
+
+background:#FFD700;
+
+transition:.5s;
+
+}
+
+.course-box:hover::after{
+
+left:0;
+
+}
+
+/* Gallery */
+
+.gallery img{
+
+box-shadow:0 8px 25px rgba(0,0,0,.2);
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.07) rotate(1deg);
+
+}
+
+/* Contact Box */
+
+.contact-box{
+
+background:rgba(255,255,255,.08);
+
+padding:30px;
+
+border-radius:20px;
+
+}
+
+/* Footer */
+
+footer{
+
+letter-spacing:1px;
+
+}
+
+/* Loading Animation */
+
+.loader{
+
+width:70px;
+
+height:70px;
+
+border:8px solid #ddd;
+
+border-top:8px solid #FFD700;
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+margin:auto;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* Scroll To Top */
+
+.top-btn{
+
+position:fixed;
+
+bottom:95px;
+
+right:20px;
+
+width:50px;
+
+height:50px;
+
+background:#FFD700;
+
+color:#000;
+
+text-align:center;
+
+line-height:50px;
+
+font-size:22px;
+
+border-radius:50%;
+
+text-decoration:none;
+
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+transition:.3s;
+
+}
+
+.top-btn:hover{
+
+transform:translateY(-6px);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.logo img{
+
+width:50px;
+
+}
+
+.call-btn{
+
+display:none;
+
+}
+
+}
+</style>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src=C:\Users\INDIA\Downloads\WhatsApp_Image_2026-07-07_at_3.23.25_AM-removebg-preview.png alt="RICE Logo">
+            <h2>RICE</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a href="tel:9734721583" class="call-btn">Call Now</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <h1>ROHAN INSTITUTE OF COMPUTER EDUCATION</h1>
+
+            <h3>(RICE)</h3>
+
+            <p>
+                Learn Today. Lead Tomorrow.<br>
+                Professional Computer Training Institute
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#courses" class="btn">
+                    View Courses
+                </a>
+
+                <a href="https://www.instagram.com/rice.institute2026" target="_blank" class="btn2">
+                    Instagram
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src=C:\Users\INDIA\Desktop\WhatsApp_Image_2026-07-07_at_4.02.48_AM-removebg-preview.png alt="Institute">
+
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+
+<h2>
+
+About Institute
+
+</h2>
+
+<p>
+
+Rohan Institute of Computer Education (RICE) provides practical computer education with affordable fees.
+
+Our mission is to build skilled students through modern computer training.
+
+</p>
+
+</section>
+
+<section id="courses">
+
+<h2>
+
+Our Courses
+
+</h2>
+
+<div class="course-box">
+
+<h3>
+
+Certificate in Information Technology (CIT)
+
+</h3>
+
+<p>
+
+Duration : 6 Months
+
+</p>
+
+<ul>
+
+<li>Computer Fundamentals</li>
+
+<li>Windows</li>
+
+<li>MS Word</li>
+
+<li>MS Excel</li>
+
+<li>MS PowerPoint</li>
+
+<li>Internet</li>
+
+<li>Photoshop</li>
+
+<li>Illustrator</li>
+
+<li>Hardware</li>
+
+</ul>
+
+</div>
+
+<div class="course-box">
+
+<h3>
+
+Certificate in Graphics Design (CGD)
+
+</h3>
+
+<p>
+
+Duration : 6 Months
+
+</p>
+
+<ul>
+
+<li>Photoshop</li>
+
+<li>Illustrator</li>
+
+<li>CorelDraw</li>
+
+<li>InDesign</li>
+
+<li>PageMaker</li>
+
+<li>Colour Theory</li>
+
+<li>Media Publishing</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>
+
+Contact Us
+
+</h2>
+
+<p>
+
+📞 9734721583
+
+</p>
+
+<p>
+
+📧 rohandesigner07@gmail.com
+
+</p>
+
+<p>
+
+Instagram :
+
+@rice.institute2026
+
+</p>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Rohan Institute of Computer Education (RICE)
+
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
